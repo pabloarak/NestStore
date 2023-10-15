@@ -12,8 +12,8 @@ import {
   ParseIntPipe,
 } from '@nestjs/common';
 
-import { CreateProductDto, UpdateProductDto } from 'src/dtos/products.dtos';
-import { ProductsService } from 'src/services/products.service';
+import { CreateProductDto, UpdateProductDto } from '../dtos/product.dto';
+import { ProductsService } from '../services/products.service';
 
 @Controller('products')
 export class ProductsController {
@@ -51,6 +51,6 @@ export class ProductsController {
 
   @Delete(':id')
   delete(@Param('id') id: number) {
-    return this.productsService.delete(id);
+    return this.productsService.remove(id);
   }
 }
