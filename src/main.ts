@@ -13,7 +13,7 @@ async function bootstrap() {
   );
   const config = new DocumentBuilder()
     .setTitle('Nest Store API')
-    .setDescription('Documentación Nest Store API')
+    .setDescription('Documentation')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
